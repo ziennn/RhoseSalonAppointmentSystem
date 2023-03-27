@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex;
+justify-content: center;
+align-items: center;
+align-content: center;">
+    <style type="text/css">
+    
+        *{
+          border: 0px;
+          padding: 0px;
+        }
+    
+        .rcpt-confirmation{
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: center;
+          align-content: center;
+          align-items: center;
+          width: 560px;
+          background: rgba(1, 1, 1, .9);
+          text-align: center;
+          color: ;
+          text-transform: uppercase;
+          padding: 10px;
+        }
+    
+        .rcpt-confirmation h1{
+          width: 50%;
+          color: rgba(225, 225, 225, .5);
+        }
+    
+        .rcpt-box{
+          border: 1px solid black;
+          padding: 10px;
+        }
+    
+        .rcpt-box *{
+          color: #ff63c7;
+        }
+    
+        #btn-rcpt{
+          padding: 5px;
+          width: 120px;
+          background: lightcoral;
+          transform: 1s ease;
+          border: 1px solid black;
+          color: whitesmoke;
+        }
+    
+    
+        #btn-rcpt:hover{
+          border: 1px solid lightpink;
+        }
+      </style>
+      
+
+<section class="rcpt-confirmation">
+    <h1>APPOINTMENT CONFIRMED</h1>
+    <h2>RHOS3 SALON</h2>
+
+    <div style="text-align: right; width: 50%;" class="rcpt-box">
+      <p class="reciept-num">Reciept Number: <?php echo $rs_id ?></p>
+      <p class="date">Date: <?php echo date("Y-m-d") ?></p>
+    </div>
+
+    <div style="text-align: left; width: 50%;" class="rcpt-box">
+      
+      <p class="name">Name: <?php echo $rs_name ?></p>
+      <p class="r-date">Reservation Date: <?php echo $rs_date ?></p>
+      <p class="service">Service: <?php echo $rs_serve ?></p>
+      <p class="price">Price: 120</p>
+      <br>
+      <p style="font-size: 8; font-style: italic;nt">Note: This Reciept was send to your Email account.</p>
+    </div>
+    <br>
+    <a id="btn-rcpt" href="./index.php">RETURN</a>
+  </section>
+
+</body>
+</html>
